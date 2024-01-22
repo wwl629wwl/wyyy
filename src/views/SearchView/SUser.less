@@ -1,0 +1,98 @@
+.search-user-box {
+    .mu-list {
+        li {
+            display: block;
+        }
+
+        .user-item {
+            cursor: pointer;
+
+            .item-wrapper {
+                color: inherit;
+                position: relative;
+                outline: none;
+
+                .inner-item {
+                    height: 72px;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 16px;
+
+                    .user-avatar {
+                        height: 50px;
+                        margin-right: 16px;
+                        position: relative;
+
+                        .avatar-img {
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 25px;
+                        }
+
+                        .user-type-badge {
+                            background-color: #f44336;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            border-radius: 50%;
+                            padding: 1px;
+                            font-size: 0;
+
+                            i {
+                                font-size: 16px;
+                                width: 16px;
+                                height: 16px;
+                                color: rgb(255, 255, 255);
+                            }
+
+                            .material-icons {
+                                display: inline-block;
+                                font-weight: normal;
+                                font-style: normal;
+                                line-height: 1;
+                                letter-spacing: normal;
+                                text-transform: none;
+                                white-space: nowrap;
+                                word-wrap: normal;
+                                direction: ltr;
+                                text-rendering: optimizeLegibility;
+                            }
+                        }
+                    }
+
+                    .item-content {
+                        // flex用于控制Flexbox布局模型中项目的空间分配、增长和缩小
+                        // grow shrink basis
+                        flex: 1 1 auto;
+                        text-align: left;
+                        min-width: 1px;
+
+                        .item-title {
+                            width: 100%;
+                            overflow: hidden;
+                            // 不自动换行
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            // 如果某个单词太长以至于无法适应容器，浏览器会尝试在单词内的任何字符处进行换行，以确保文本不会溢出容器。
+                            word-wrap: break-word;
+
+                            font-size: 16px;
+                            height: 24px;
+                            line-height: 24px;
+                        }
+
+                        .gender {
+                            margin-left: 4px;
+                        }
+
+                        .subtitle {
+                            color: rgba(0, 0, 0, 0.54);
+                            font-size: 12px;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

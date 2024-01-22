@@ -1,0 +1,38 @@
+.mv-item-box {
+    margin: 20px 8px 0;
+    cursor: pointer;
+    width: 160px;
+
+    .mv-cover {
+        height: 120px;
+        // 实现背景图片的平铺
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+
+        .playcnt {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            padding: 2px 6px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+
+            .cnt-number {
+                margin-left: 4px;
+                color: #fff;
+                text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+            }
+        }
+        .duration {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 2px 6px;
+            color: #fff;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+        }
+    }
+}

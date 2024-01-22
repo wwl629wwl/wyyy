@@ -1,0 +1,42 @@
+.home-box {
+    /* 因为header要吸顶 所以通过设置上间距 来调整 */
+    margin-top: 100px;
+    height: calc(100vh - 164px);
+    overflow: auto;
+    width: 100%;
+
+    .mus-card {
+        margin: 40px;
+        background-color: #fff;
+        position: relative;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 12px;
+            opacity: 0.62;
+        }
+
+        .scroll-box {
+            display: flex;
+            overflow: auto;
+            min-height: 218px;
+
+            .scroll-item-box {
+                &:last-child {
+                    margin-right: 12px;
+                }
+
+                flex-shrink: 0;
+                margin-left: 12px;
+                cursor: pointer;
+            }
+
+
+        }
+
+
+    }
+}

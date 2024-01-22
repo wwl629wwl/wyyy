@@ -1,0 +1,104 @@
+.personal-box {
+    margin-top: 64px;
+    height: calc(100vh - 128px);
+    width: 1000px;
+    overflow: auto;
+    display: flex;
+
+    .personal-detail-box {
+        flex: 3;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .user-bgi {
+            position: relative;
+            height: 300px;
+            width: 640px;
+            margin: 0 auto;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+
+            .user-avatar {
+                position: relative;
+                height: 75px;
+                width: 75px;
+                margin-bottom: 16px;
+
+                .avatar-img {
+                    height: 75px;
+                    width: 75px;
+                    border-radius: 50%;
+                }
+
+
+            }
+
+            .username {
+                margin: 4px 0;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+                font-size: 18px;
+
+                i {
+                    font-size: 20px;
+                }
+            }
+
+            .user-follows {
+                margin: 4px 0;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+                font-size: 14px;
+            }
+
+            .user-update {
+                margin-top: 20px;
+                display: flex;
+
+                .ant-btn {
+                    user-select: none;
+                    outline: none;
+                    appearance: none;
+                    color: rgb(255, 255, 255);
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.ant-tabs {
+
+    .ant-tabs-nav {
+        margin-left: 20px;
+
+        .ant-tabs-nav-wrap {
+
+            .ant-tabs-nav-list {
+
+
+                .ant-tabs-tab {}
+            }
+        }
+    }
+
+    .ant-tabs-content-holder {
+        display: flex;
+        height: 100%;
+        overflow: auto;
+        width: 100%;
+
+        .ant-tabs-content {
+            height: 100%;
+
+            .ant-tabs-tabpane {
+
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.actions-box {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-evenly;
+    .action-item {
+        cursor: pointer;
+
+        .item-icon {
+            width: 72px;
+            height: 72px;
+            box-sizing: border-box;
+            border: 2px solid #1677ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        .title {
+            color: rgba(0, 0, 0, 0.87);
+            text-align: center;
+            margin: 8px 0 0 0;
+            font-size: 16px;
+        }
+    }
+
+    .text-color {
+        color: #1677ff;
+    }
+}
+
+/* 
+margin: 10px;上、右、下、左边距都为 10px 
+margin: 10px 20px：上下边距为 10px，左右边距为 20px 
+margin: 10px 20px 30px;上边距为 10px，左右边距为 20px，下边距为 30px 
+margin: 10px 20px 30px 40px;上、右、下、左边距分别为 10px、20px、30px、40px 
+*/

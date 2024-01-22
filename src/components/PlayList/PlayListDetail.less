@@ -1,0 +1,177 @@
+.play-list-detail {
+    flex: 3;
+    height: 100%;
+    overflow: auto;
+    
+    .header {
+        display: flex;
+        padding: 16px;
+
+        .ant-image-img {
+            height: 160px;
+            width: 160px;
+            margin-right: 10px;
+        }
+
+        .desc {
+            width: 100%;
+
+            .author-info {
+                .name {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+
+                .create-info {
+                    display: flex;
+                    align-items: center;
+
+                    .creator {
+                        // 用户无法选择页面上的文本内容 无法复制 剪切或选择操作
+                        user-select: none;
+                        cursor: pointer;
+                        margin: 9px 0;
+                        display: flex;
+                        align-items: center;
+                        max-width: calc(100% - 150px);
+
+                        .creator-avatar {
+                            width: 40px;
+                            height: 40px;
+                            font-size: 20px;
+                            flex-shrink: 0;
+
+
+
+                            .auth-avatar {
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .create-name {
+                            color: rgba(0, 0, 0, 0.87);
+                            margin: 0 4px;
+                            // margin-bottom: 4px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 20px;
+                        }
+                    }
+
+                    .create-time {
+                        margin-left: 4px;
+                        min-width: 140px;
+                        color: rgba(0, 0, 0, 0.54);
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .action-btn {
+                display: flex;
+                margin: 4px 0 4px 8px;
+
+                .ant-btn {
+                    border: none;
+                    display: flex;
+                    align-items: center;
+
+
+                    i {
+                        margin-right: 1px;
+                        font-size: 18px;
+                    }
+
+                    .btn-content {
+                        color: rgba(0, 0, 0, 0.87);
+                        font-size: 13px;
+                    }
+                }
+
+                .ant-btn:hover {
+                    background-color: #ADD8E6;
+                }
+            }
+
+            .stored {
+                color: #03A9F4;
+                font-weight: bold;
+            }
+
+            .comment {
+                width: 100%;
+
+                .ant-collapse {
+                    .ant-collapse-content {
+                        .ant-collapse-content-box {
+                            text-align: left;
+                            min-width: 1px;
+
+                            .tags {
+                                margin: 8px;
+                                white-space: pre-wrap;
+                            }
+
+                            .descriptiion {
+                                margin: 8px;
+                                // white-space-collapse: preserve;
+                                // text-wrap: wrap;
+                                // 在处理代码、文本块或需要保留原始格式的文本时非常有用，因为它可以保留原始的空白字符和换行符
+                                white-space: pre-wrap;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .play-list {
+        width: 100%;
+
+        .play-list-header {
+            border-bottom: 1px solid #8B0000;
+
+            .ant-btn {
+                // Button元素不会占据剩余的宽度
+                flex-grow: 0;
+                margin-left: 10px;
+
+                i {
+                    font-size: 14px;
+                }
+            }
+
+            display: flex;
+            height: 40px;
+            align-items: center;
+
+            .search-input {
+                // 这样input元素会占据剩余的宽度
+                margin: 0 10px;
+                flex-grow: 1;
+
+                /* 给input框获取焦点的时候设置样式 */
+                input:hover {
+                    border: 2px solid #4096ff;
+                }
+            }
+
+
+        }
+
+        .music-list {
+            width: 100%;
+
+            .music-scroll {
+                // 用于设置容器元素的溢出内容的处理方式。
+                // 可以实现在容器中显示滚动条，以便在内容溢出时进行滚动查看。
+                overflow: scroll;
+            }
+        }
+    }
+}

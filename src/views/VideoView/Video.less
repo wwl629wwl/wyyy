@@ -1,0 +1,54 @@
+.video-box {
+    margin-top: 64px;
+    height: calc(100vh - 128px);
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    .video-detal-box {
+        flex: 3;
+        height: 100%;
+        overflow: auto;
+
+        .video-detail {
+            margin: 0 16px;
+            display: flex;
+            flex-direction: column;
+
+            .desc {
+                margin: 8px 0;
+
+                .title {
+                    font-size: 20px;
+                }
+
+                .by {
+                    margin-left: 8px;
+                    font-size: 14px;
+                }
+
+                .creator {
+                    margin-left: 8px;
+                    font-size: 14px;
+                    color: #64B5F6;
+                }
+            }
+        }
+
+        video {
+            width: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .actions {
+            margin: 8px 0;
+
+            .ant-btn {
+                margin-left: 8px;
+                line-height: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

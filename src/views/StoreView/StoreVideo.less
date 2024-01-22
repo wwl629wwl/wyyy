@@ -1,0 +1,63 @@
+.store-video-box {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    overflow: auto;
+
+    .store-video-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: auto;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .store-video-right {
+        flex: 3;
+        height: 100%;
+        overflow: auto;
+
+        .store-video-detail {
+            margin: 0 16px;
+            display: flex;
+            flex-direction: column;
+
+            .desc {
+                margin: 8px 0;
+
+                .title {
+                    font-size: 20px;
+                }
+
+                .by {
+                    margin-left: 8px;
+                    font-size: 14px;
+                }
+
+                .creator {
+                    margin-left: 8px;
+                    font-size: 14px;
+                    color: #64B5F6;
+                }
+            }
+        }
+
+        video {
+            width: 100%;
+            max-width: 75%;
+            object-fit: contain;
+            margin-left: 8px;
+        }
+
+        .actions {
+            margin: 8px 0;
+
+            .ant-btn {
+                margin-left: 8px;
+                line-height: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

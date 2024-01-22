@@ -1,0 +1,43 @@
+.album-item-box {
+    background-color: #fff;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2),
+        0 1px 1px 0 rgba(0, 0, 0, .14),
+        0 1px 3px 0 rgba(0, 0, 0, .12);
+
+    .pic {
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        // 等价于 x 和 y 两个方向上都是center 实现背景图片的平铺
+        background-position: center center;
+
+        .album-titles {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            // 1em是CSS中的相对长度单位，它表示元素的字体大小。
+            padding: 1em;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+
+            .ablum-title {
+                font-size: 1em;
+                line-height: 100%;
+                color: white;
+                filter: drop-shadow(0 0 4px black);
+            }
+        }
+    }
+
+    .album-info {
+        position: relative;
+    }
+}
+
+.item {
+    width: 200px;
+    margin: 20px 10px 0;
+    cursor: pointer;
+}

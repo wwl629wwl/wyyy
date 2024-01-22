@@ -1,0 +1,89 @@
+.play-list {
+    max-height: 396px;
+    overflow: scroll;
+    padding: 0 12px;
+    scroll-behavior: smooth;
+    overflow-x: hidden; //隐藏横向的scroll轴
+
+    .list-header {
+        height: 36px;
+        padding: 0 4px 0 12px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        opacity: 0.75;
+        margin-bottom: 10px;
+
+        .count {
+            margin-right: auto;
+        }
+
+        .buttons {
+            display: flex;
+
+            .ant-btn {
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                border-color: #fff;
+            }
+
+            .ant-btn:hover {
+                border-color: #d9d9d9;
+            }
+        }
+    }
+
+
+
+    .play-list-item {
+        width: 300px;
+        padding: 4px 4px;
+        margin-bottom: 4px;
+        height: 36px;
+        color: rgba(0, 0, 0, 0.87);
+        display: flex;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+
+        box-sizing: border-box;
+
+        .item-action {
+            display: flex;
+            align-items: center;
+            margin-right: 8px;
+        }
+
+        .item-title {
+            width: 100%;
+
+            .artist {
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.54);
+            }
+        }
+
+        .action-after {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            opacity: 0;
+        }
+
+        .loading {
+            display: flex;
+        }
+    }
+
+
+}
+
+.play-list-item:hover {
+    background-color: #eee;
+
+    .action-after {
+        opacity: 0.6;
+    }
+
+}

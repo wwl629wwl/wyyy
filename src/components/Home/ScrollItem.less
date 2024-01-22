@@ -1,0 +1,29 @@
+.scroll-item-box {
+    width: 160px;
+    height: 210px;
+    display: block;
+    .cover {
+        height: 160px;
+        width: 160px;
+        position: relative;
+        color: #e5e2e5;
+
+        .mask {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.54);
+            padding: 6px 10px;
+        }
+    }
+
+    .caption {
+        color: rgba(0, 0, 0, 0.87);
+        height: 42px;
+        display: -webkit-box;
+        overflow: hidden;
+        font-size: 16px;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,169 @@
+.lyrics-box {
+    margin-top: 64px;
+    height: calc(100vh - 128px);
+    overflow: auto;
+    width: 100%;
+    position: relative;
+    background-color: #fafafa;
+}
+
+.play {
+    color: black;
+    display: flex;
+    flex-direction: row;
+
+    .bkg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .phonograph {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .styleus {
+            z-index: 2;
+            margin: -6px 0 -74px 74px;
+            transition: transform 0.5s;
+            transform-origin: 15px 0;
+            transform: rotate(-25deg);
+            pointer-events: none;
+            user-select: none;
+
+            img {
+                width: 100px;
+                height: 142.5px;
+            }
+        }
+
+        @keyframes diskplaying {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .vinyl {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            animation: diskplaying 25s linear infinite;
+            animation-play-state: paused;
+            user-select: none;
+            pointer-events: none;
+
+            .cover {
+                position: absolute;
+                display: block;
+                width: 220px;
+                height: 220px;
+                margin: 65px;
+            }
+
+            .borde {
+                position: absolute;
+                display: block;
+                width: 350px;
+                height: 350px;
+                top: 0;
+                left: 0;
+            }
+
+            // &.playing {
+            //     .vinyl {
+            //         animation-play-state: running;
+            //     }
+            // }
+        }
+
+        // 交集选择器
+        .vinyl.playing {
+            animation-play-state: running !important;
+            font-size: 18px !important;
+        }
+
+        .styleus.playing {
+            transform: rotate(0deg);
+        }
+    }
+
+    .info {
+        z-index: 1;
+        flex-grow: 1;
+        flex-basis: 0;
+        margin-left: 100px;
+
+        .title {
+            margin-top: 16px;
+            color: #81D4FA;
+            display: flex;
+            align-items: center;
+            padding-left: 6px;
+
+            .name {
+                display: inline-block;
+                max-width: calc(50vw - 48px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                vertical-align: bottom;
+                font-size: 26px;
+            }
+        }
+
+        .source {
+            margin: 16px 0 24px;
+            padding-left: 6px;
+
+            .source-artist {
+                margin-inline-end: 16px;
+                font-size: 14px;
+            }
+
+            .source-album {
+                white-space: nowrap;
+                font-size: 14px;
+            }
+        }
+
+        .lyric {
+            height: 340px;
+            position: relative;
+            color: rgba(255, 255, 255, 0.6);
+
+            .scroll-wrapper {
+                height: 100%;
+                overflow: hidden;
+                padding-left: 6px;
+
+                .scroll {
+                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+                    .line {
+                        margin: 14px 0;
+                        color: black;
+                        white-space: pre-wrap;
+                        font-size: 14px;
+                    }
+
+                    .active {
+                        color: #4DB6AC;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,278 @@
+@import './assets/reset.min.css';
+
+// html,
+// body {
+//     height: 100%;
+//     background: #fff;
+// }
+
+div {
+    box-sizing: border-box;
+}
+
+#root {
+    height: calc(100vh - 128px);
+    background: #fff;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* 版心 */
+.container {
+    width: 1000px;
+    height: calc(100% - 128px);
+}
+
+
+.ant-btn {
+    border-radius: 0;
+}
+
+.ant-input {
+    border-radius: 0;
+}
+
+/* 设置drawer的样式 */
+.ant-drawer-content-wrapper {
+    .ant-drawer-wrapper-body {
+        .ant-drawer-body {
+            padding: 0;
+
+            .avatar-box {
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: 100%;
+                height: 200px;
+                box-sizing: border-box;
+                background-size: cover;
+                background-image: url('./assets/imgs/bkg.svg');
+                background-position-y: 50%;
+
+                .avatar {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+
+                .title {
+                    display: flex;
+                    margin-top: 10px;
+
+                    font-size: 16px;
+                    align-items: center;
+                    justify-content: space-between;
+                    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.66));
+
+                    .username {
+                        color: white;
+                        font-size: 20px;
+                        cursor: pointer;
+                        line-height: 36px;
+                        width: 160px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+
+            .ant-list {
+                .ant-spin-container {
+                    li:first-child {
+                        margin-top: 10px;
+                    }
+
+                    .ant-list-item {
+                        span {
+                            svg {
+                                font-size: 20px;
+                                margin-left: 10px;
+                                margin-right: 20px;
+                            }
+                        }
+
+                        font-size: 18px;
+                    }
+
+                    .ant-list-item:hover {
+                        background-color: rgba(0, 0, 0, 0.28);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ant-modal-root {
+    .ant-modal-wrap {
+        .ant-modal {
+            .ant-modal-content {
+                .ant-modal-close {
+                    margin-left: 10px;
+                }
+
+                .ant-modal-body {
+                    .modal-login-box {
+                        width: 100%;
+                        height: 200px;
+
+                        .input-body {
+                            .login-header {
+                                width: 100%;
+                                height: 50px;
+                                font-size: 16px;
+                                box-sizing: border-box;
+                                line-height: 50px;
+                                text-align: center;
+                                color: #212121;
+                            }
+
+                            .ant-form {
+                                margin-top: 10px;
+                                padding: 0 20px;
+
+                                .ant-form-item {
+                                    height: 50px;
+
+                                    .ant-row {
+
+                                        .ant-form-item-control-input {
+                                            .ant-input-affix-wrapper {
+                                                border-radius: 0;
+                                            }
+                                        }
+
+                                        input {
+                                            height: 40px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .ant-modal-footer {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    flex-direction: row-reverse;
+
+                    .ant-btn {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 设置tabs的样式 防止tabs滚动的时候 页面出现错误 */
+
+
+/* flex布局里面的空盒子 */
+.empty {
+    margin-top: 0;
+    width: 200px;
+    margin: 20px 10px 0;
+}
+
+/* pagination的公共样式 */
+.pagination {
+    padding: 16px 16px 30px;
+    // margin-bottom: 20px;
+}
+
+/* flex布局的list样式 */
+.list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* item的公共样式 */
+.item {
+    background-color: #fafafa;
+    position: relative;
+    width: 200px;
+    margin: 20px 10px 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2),
+        0 3px 3px 0 rgba(0, 0, 0, .3),
+        0 3px 3px 0 rgba(0, 0, 0, .3);
+}
+
+/* 设置背景图片的公共样式 */
+.cover {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+/* 设置cover-title盒子的公共样式 */
+.media-title {
+    padding: 1em;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* title的具体样式 */
+.card-title {
+    font-size: 14px;
+    line-height: 100%;
+    color: white;
+    filter: drop-shadow(0 0 4px black);
+}
+
+.ant-list-item {
+    cursor: pointer;
+}
+
+
+
+/* card-header的具体样式 */
+.card-header {
+    height: 60px;
+    padding: 10px;
+    font-weight: 500;
+    position: relative;
+    white-space: nowrap;
+}
+
+
+
+.card-header-title {
+    padding: 0;
+    display: inline-block;
+    white-space: normal;
+}
+
+.header-title {
+    width: 110px;
+    font-size: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.header-sub-title {
+    color: rgba(0, 0, 0, 0.57);
+    font-size: 14px;
+}
+
+.video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}

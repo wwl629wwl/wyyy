@@ -1,0 +1,44 @@
+.search-album-item {
+    display: block;
+
+    .header {
+        height: 60px;
+        padding: 10px;
+        font-weight: 500;
+        white-space: nowrap;
+        display: flex;
+
+        .header-avatar {
+            margin-right: 16px;
+            // background-color: #bdbdbd;
+            color: #fff;
+
+            .inner {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-self: center;
+
+                .ant-image {
+                    width: 100%;
+                    height: 100%;
+
+                    .ant-image-img {
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+            }
+
+        }
+
+        .header-title {
+            padding: 0;
+            // 会将多个连续的空格合并为一个空格，并且文本会根据需要自动换行
+            white-space: normal;
+        }
+    }
+}

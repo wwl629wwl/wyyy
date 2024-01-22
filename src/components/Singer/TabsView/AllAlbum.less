@@ -1,0 +1,17 @@
+.all-album-box {
+    min-height: calc(100vh - 176px);
+
+    .album-list {
+        display: flex;
+        // 是CSS中用于设置flex容器的换行方式的属性。
+        // 当容器中的项目（flex项）超出容器的宽度时，flex-wrap: wrap;可以让项目自动换行到下一行。
+        // wrap-reverse：项目自动换行到下一行，但是从右到左排列。
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .pagination-box {
+        margin: 20px;
+    }
+}
